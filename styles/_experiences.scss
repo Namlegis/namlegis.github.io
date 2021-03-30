@@ -1,0 +1,88 @@
+/*===== START OF EXPERIENCES PAGE =====*/
+.stories-wrapper {
+    display: flex;
+
+    //Sticky Sidebar with a Subscribe form
+    .sidebar {
+        width: 25%;
+        height: 25vh;
+        margin-top: 2.5rem;
+        position: sticky;
+        top: 10%;
+        //Changes to the Subscribe form used on the Home Page - Main difference from row to column
+        .sidebar-subscribe {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 30rem;
+                margin: 1rem 0;
+                .subscribe-text {
+                    grid-auto-rows: auto;
+                    padding: 0;
+                    padding-left: 10%;
+                }
+                h2 {
+                    font-size: 5rem;
+                }
+                #email-input {
+                    width: 100%;
+                } 
+        }
+    }
+}
+
+.stories {
+    margin-bottom: 6rem;
+    margin: 0 auto;
+    width: 100%;
+    border-radius: 5px;
+    padding: 4rem 3rem;
+    //"Latest Stories"
+    h2 { 
+        font-size: 4rem;
+        margin-bottom: 1rem;
+    }
+    //Article wrapper
+    article {
+        display: flex;
+        align-items:center;
+        padding: 4rem 0;
+        h3 {
+            border-top: solid rgb(112, 112, 112) 1px;
+            padding: 1rem 0 .2rem 0;
+        }
+        p {
+            margin: 1rem 0;
+        }
+    }
+    .article-text {
+        padding-right: 2rem;
+        width: 70ch;
+        align-self: flex-start;
+    }
+    .article-img  {
+        height: auto;
+        width: 100%; 
+        margin: 2rem 0;
+    }
+    .meta {
+        display: flex;
+        align-items: center;
+        margin-top: -1rem;
+        .svg-inline--fa {
+            width: 1.2rem;
+            height: auto;
+            margin-right: .5rem;
+        } 
+        p {
+            font-size: 1.4rem;
+            color: $bright-color;
+            padding-top: .2rem;
+        }
+        .author {
+            margin-right: 1.2rem;
+        }
+    }
+}
+/*===== END OF EXPERIENCES PAGE =====*/

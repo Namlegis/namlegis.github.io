@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESL Community - Home</title>
+    <meta name="description" content="A community for ESL teachers and students.">
+
+    <link rel="stylesheet" href="./styles/style.css">
+
+    <!--For the fonts and social media icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<!--=== START of the Header ====-->
+    <header>
+        <div class="header-wrapper">
+            <h1 id="logo" class="logo"><a href="./index.html">ESL Community</a></h1>
+            <div class="break-line"></div> <!--++++This is for the vertical separating line++++-->
+            <nav>
+                <ul class="menu">
+                    <li><a href="./ideas.html">Ideas</a></li>
+                    <li><a href="./resources.html">Resources</a></li>
+                    <li><a href="./experiences.html">Experiences</a></li>
+                    <li><a class="nav-contact" href="./contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<!--=== END of the Header ====-->
+
+<!--====Main Section====-->
+    <main>
+        <section class="top-text">
+            <h1 class="page-title">Contact</h1>
+            <p class="p-contact">
+                We are dedicated to making sure this community grows and changes based on your input and what you want it to be. We encourage you to contact us!
+            </p>
+        </section>
+
+<!--====Contact Page Body====-->
+        <section class="contact-body">
+
+            <!--++++Contact Form Start++++-->
+            <section class="contact-form">
+                <div class="contactForm-title">
+                    <h3>TALK TO US</h3>                    
+                </div>               
+
+            <!-- F O R M - start -->
+                <div class="formInput">
+                <!-- ===Form Area: Name=== -->
+                    <div class="contactForm-grid-1of2">
+                        <label for="name">Name:</label>
+                    </div>
+                    <div class="contactForm-grid-2of2">
+                        <input class="write-here" type="text" id="name" name="name" placeholder=" Name">                        
+                    </div>    
+                <!-- ===Form Area: Email Address=== -->
+                    <div class="contactForm-grid-1of2">
+                        <label for="email">Email:</label>
+                    </div>
+                    <div class="contactForm-grid-2of2">
+                        <input class="write-here" type="text" id="email" name="email" placeholder=" Email">                        
+                    </div> 
+                <!-- ===Form Area: Message=== -->
+                    <div class="contactForm-grid-1of2">
+                        <label for="message">Message:</label>
+                    </div>
+                    <div class="contactForm-grid-2of2">
+                        <textarea id="message" name="message" placeholder="Write here..."></textarea>                        
+                    </div>
+                </div> 
+
+            <!--Submit Button-->
+                <div class="contactForm-grid-submit">
+                    <input type="submit" value="Submit">                    
+                </div>          
+            </section>
+
+            <!--Other Contact-->
+            <section class="contact-body-right">
+                <h3>
+                    Or contact us at:
+                </h3>
+                <div class="other-contact"> 
+                    <h5 class="contact-h5">Email:</h5>
+                    <a href="#" class="">contact@eslcommunity.com</a>
+                    <h5 class="contact-h5">Facebook:</h5>
+                    <a href="#" class="">www.facebook.com/eslcommunity/</a>
+                    <h5 class="contact-h5">Twitter:</h5>
+                    <a href="#" class="">www.twitter.com/eslcommunity/</a>
+                </div>
+               
+
+            </section>
+        </section>
+    </main>
+
+<!--=== START of the Footer ====-->
+    <footer>
+        <section class="footer-wrapper">
+            <div class="to-top-btn">
+                <!--Button to scroll to top-->
+                <a onclick="scrollUp()" class="fa fa-arrow-circle-up"></a>
+            </div>
+            <div class="social-media-icons"> <!--Grid is used here-->
+                <div><a href="#" class="fa fa-facebook"></a></div>
+                <div><a href="#" class="fa fa-instagram"></a></div>
+                <div><a href="#" class="fa fa-twitter"></a></div>
+                <div><a href="#" class="fa fa-youtube"></a></div>
+            </div>
+            <div class="built-by">
+                <h2>hand coded by me</h2>
+            </div>
+         </section>
+    </footer>
+<!--=== END of the Footer ====-->
+
+</body>
+<script src="./scripts/myapp.js"></script>
+</html>

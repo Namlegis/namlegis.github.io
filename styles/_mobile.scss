@@ -1,0 +1,275 @@
+/*===== START OF RESPONSIVE STYLING =====*/
+@media (max-width:1300px){
+    .hero-img {
+        max-height: 60vh; //The hero image is too big on smaller screens, so this shrinks it some
+    }
+    .choose-nav {
+        padding: 3rem 0;
+        #btnContainer .btn {
+            margin: 0 .8rem;
+        }
+    }
+    .stories {
+        margin: unset;
+        width: 70%;
+    }
+    .stories article {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+    .article-text {
+        max-width: 600px;
+    }
+    .contact-body {
+        max-width: 100%;
+    }
+    .p-contact {
+        max-width: 90%;
+    }
+    .contact-body-right {
+        .contact-h5 {
+            max-width: 100%;
+            font-size: 2.6rem;
+        }
+    }
+
+    //Fixes an issue where the page only shows 2 articles per row and leaves a big open space
+    .filter-div {
+        width: 32%;
+    }
+    footer {
+        .fa {
+            min-width: 4.5rem;
+        }
+    }
+}
+
+@media (max-width:1200px){
+    //Fixes issues with the header
+    .header-wrapper nav {
+        position: static;
+    }
+    .header-wrapper nav ul :nth-child(4) {
+        position: static;
+    }
+    .break-line {
+        display: none;
+    }
+    
+}
+@media (max-width: 1000px) {
+/*Navigation on Tablet / Mobile --- Makes the header switch from a flex row direction to column direction. Also fixes some of the font sizes to fit inside the viewport */
+    .header-wrapper {
+        flex-direction: column;
+        align-items: center;
+        #logo {
+            margin: 1rem 0;
+        }
+        nav {
+            width: auto;
+        }
+    }
+    .header-wrapper nav ul li {
+        font-size: 1.6rem;
+        font-weight: 300;
+    }
+/*END OF NAV on Tablet & Mobile */
+
+    //changes the filter navigation from row to column along with other changes to better fit smaller screens.
+    .choose-nav {
+        padding: 1rem;
+        margin: 0 auto;
+        margin-top: 2rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        #btnContainer {
+            margin-top: 1rem;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            .btn {
+                margin: 0;
+                padding:.6rem 1rem;
+            }
+        }
+    }
+    .stories {
+        width: 100%;
+    }
+    .filter-div {
+        width: 48%; //Go from 3 columns to 2 columns
+    }
+    .sidebar {
+        display: none; //Hides the subscribe navbar
+    }
+    .p-contact {
+        max-width: 100%;
+    }
+    .contact-body {
+        flex-direction: column;
+    }
+    .contact-body-right .contact-h5 {
+        display: flex;
+        align-items: center;
+    }
+    .contact-body-right,
+     .contact-form{
+        padding: 5rem 0; //Centers everything, takes away the padding to push them apart when in 2 columns
+    }
+    .other-contact {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+         a {
+            font-size: 2rem;
+        }
+    }
+}
+
+@media all and (max-width:700px) {
+    body {
+        max-width: 100%;
+    }
+//Header Logo Size
+    .header-wrapper {
+        & #logo {
+            font-size: 4rem;
+        }
+    }
+//Footer - Change from row to column and remove the button to scroll to the top
+    footer {
+        padding: 1rem 0;
+        .footer-wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+        .to-top-btn {
+            display: none;
+        }
+        .social-media-icons {
+            margin-top: 2rem;
+        }
+        .built-by {
+            margin: 2rem 0 1rem 0;
+        }    
+    }
+    .filter-div {
+        min-height: 0px;
+    }
+//HOME PAGE
+    .hero {
+        margin-top: 0;
+        padding: 0;
+        text-align: center;
+    }
+    .hero-img {
+        max-height: 50vh;
+    }
+    .posts-wrapper {
+        flex-direction: column;
+        padding: 0;
+        .latest-posts {
+            margin: 3rem auto 2rem;
+            width: 100%;
+        }
+    }
+    .latest-section {
+        margin-bottom: 50px;
+    }
+    .subscribe {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem 0;
+        padding-left: 10%;
+        padding-top: 0%;
+        .subscribe-text {
+            grid-auto-rows: auto;
+        }
+        .subscribe-form {
+            padding-right: 10%;
+        }
+    }
+
+// Ideas and Resources
+    .top-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        h1 {
+            font-size: 4.8rem;
+        }
+        
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+    }
+    .filter-div {
+        width: 100%;
+    }
+//Experiences
+    .stories {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+        justify-content: center;
+        padding-top: 2rem;
+        h2 {
+            font-size: 3rem;
+            margin-top: 2rem;
+            margin-bottom: -2rem;
+        }
+    }
+    .stories .article-text {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+//Contact
+    .p-contact {
+        font-size: 2rem;
+        text-align: left;
+    }
+    .contact-form {
+        align-items: right;
+        h3 {
+            font-size: 2.8rem;
+            margin-bottom: -1rem;
+        }
+        textarea {
+            width: 100%;
+        }
+    }
+    .contact-body-right {
+        all: initial;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h3 {
+            font-size: 3rem;
+        }
+    }
+    .contact-form .write-here {
+        width: 100%;
+    }
+    .formInput {
+        width: 100%;
+    }
+}
+
+@media (max-width:380px) {
+    .header-wrapper nav ul li {
+        padding: 5px 10px;
+    }
+}
+/*===== END OF RESPONSIVE STYLING =====*/

@@ -1,0 +1,72 @@
+/* ==== START of styling for Home Page =====*/
+
+//top section that is used in many pages
+.page-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1{
+        font-size: 3.5rem;
+    }
+    h4{
+        font-size: 2rem;
+        font-weight: 500;
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+}
+.hero {
+    margin-top: 40px;
+    margin-bottom: 100px;
+}
+//div to make sure the picture properly scales
+.hero-img{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    max-width: 2048;
+    width: 100%;
+    height: 80rem;
+    img {
+        width: 100%;
+    }
+}
+
+/* === Latest section start -> Title with 4 articles in a row below it ===== */
+.latest-section {
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    h2{
+        font-size: 3.5rem;
+    }
+    h3 {
+        margin-top: 1rem;
+        font-weight: 700;
+    }
+}
+.posts-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+    :nth-child(1) {
+        margin-left: 0px; // Pushes the left most article to the start of the div
+    }
+    :last-child{
+        margin-right: 0px;; // Pushes the right most article to the end of the div
+    }
+}
+.latest-posts {
+    margin: 0 20px;
+    width: 24%; //Makes all of the articles more uniform
+    .img-div {
+        width: 100%;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+        }
+    }    
+}
+/* === Latest section END ===== */
+/* ==== END of styling for Home Page =====*/

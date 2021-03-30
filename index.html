@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESL Community - Home</title>
+    <meta name="description" content="A community for ESL teachers and students.">
+
+    <link rel="stylesheet" href="./styles/style.css">
+
+    <!--For the fonts and social media icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <!--=== START of the Header ====-->
+    <header>
+        <div class="header-wrapper">
+            <h1 id="logo" class="logo"><a href="./index.html">ESL Community</a></h1>
+            <div class="break-line"></div> <!--++++This is for the vertical separating line++++-->
+            <nav>
+                <ul class="menu">
+                    <li><a href="./ideas.html">Ideas</a></li>
+                    <li><a href="./resources.html">Resources</a></li>
+                    <li><a href="./experiences.html">Experiences</a></li>
+                    <li><a class="nav-contact" href="./contact.html">Contact</a></li> <!--This one is offset and pushed to the left of the page-->
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!--=== END of the Header ====-->
+
+    <!--START OF MAIN SECTION-->
+    <main>
+
+    <!--=== START of the Hero Section - Text at the top followed by a big image that goes just below the fold ====-->
+        <section class="hero">
+            <div class="page-title">
+                <h1>A Community for ESL Teachers & Students</h1>
+                <h4>Share, Inspire, Learn!</h4>
+            </div>
+            <div class="hero-img">
+                <img src="./images/DiversityCommunityPuzzlesByBarsrsind.jpg" alt="Mosaic illustration of faces of people from different ethicities in front of the planet Earth">
+            </div>
+        </section>
+    <!--=== END of the Hero Section ====-->
+        
+    <!--=== START of Latest Post Section - Title with four posts in a row below ===-->
+        <section class="latest-section">
+            <div class="latest-posts-title">
+                <h2>Latest Posts</h2>
+            </div>
+            <div class="posts-wrapper">
+                <article class="latest-posts">
+                    <div class="img-div"><img src="./images/Top5YT.png" alt="YouTube logo with text inside that reads Top 5 Ways to Learn English using YouTube"></div>
+                    <div class="latest-text">
+                        <h3>Top 5 Ways to Learn English using YouTube</h3>
+                        <p>Most people tend to think of YouTube as a place to find music, funny videos, or maybe a quick tutorial in something. Besides actual tutorials in English, it can be used in creative ways to truly be a great tool. </p>
+                        <a href="#">Continue reading...</a>
+                    </div>
+                </article>
+                <article class="latest-posts">
+                    <div class="img-div"><img src="./images/ed.png" alt="Blue background with question marks over it and the letters id, d and t in front of it"></div>
+                    <div class="latest-text">
+                        <h3>Pronouncing "-ed"</h3>
+                        <p>An early frustration to learning English can be that it seems like the student never correctly pronounces the past simple tense correctly. This guide provides a few basic rules and some possible lesson ideas to help.</p>
+                        <a href="#">Continue reading...</a>
+                    </div>
+                </article>
+                <article class="latest-posts">
+                    <div class="img-div"><img src="./images/tutor.jpg" alt="Illustration of a woman reading a book to a child wearing glasses and taking notes. Both sitting behind a desk."></div>
+                    <div class="latest-text">
+                        <h3>How I Became a Tutor</h3>
+                        <p>I have taught in many different situations, in many different countries. Even though there are definite downsides, I ultimately prefer tutoring. What works and doesn't isn't always as clear cut as many would have you believe. </p>
+                        <a href="#">Continue reading...</a>
+                    </div>
+                </article>
+                <article class="latest-posts">
+                    <div class="img-div"><img src="./images/nerves.jpg" alt="Illustration of a nervous man wearing a suit looking at a microphone"></div>
+                    <div class="latest-text">
+                        <h3>First Classes</h3>
+                        <p>The first class with new students is definitely the most stressful. Here are some tips & tricks in how to better prepare and make sure those first classes go as smoothly as possible! </p>
+                        <a href="#">Continue reading...</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    <!--=== END of the Latest Posts Section ====-->
+
+    <!--=== START of the Subscribe Section ====-->
+        <section class="subscribe">
+            <div class="subscribe-text"> <!--Grid is used to nicely offset the text-->
+                <div class="grid-item-1"><h2>Subscribe</h2></div>
+                <div class="grid-item-2"><p>to get the latest</p></div>
+            </div>
+            <form action="subscribeForm.php" method="POST" class="subscribe-form">
+                <input type="email" name="email" id="email-input" placeholder="email" required>
+                <button type="submit" name="submit">Submit</button>
+            </form>
+        </section>
+    <!--=== END of the Subscribe Section ====-->
+<!-- === END OF MAIN SECTION === -->
+    </main> 
+
+<!--=== START of the Footer ====-->
+     <footer>
+         <section class="footer-wrapper">
+            <div class="to-top-btn">
+                <!--Button to scroll to top-->
+                <a onclick="scrollUp()" class="fa fa-arrow-circle-up"></a>
+            </div>
+            <div class="social-media-icons"> <!--Grid is used here-->
+                <div><a href="#" class="fa fa-facebook"></a></div>
+                <div><a href="#" class="fa fa-instagram"></a></div>
+                <div><a href="#" class="fa fa-twitter"></a></div>
+                <div><a href="#" class="fa fa-youtube"></a></div>
+            </div>
+            <div class="built-by">
+                <h2>hand coded by me</h2>
+            </div>
+         </section>
+    </footer>
+<!--=== END of the Footer ====-->
+
+</body>
+<script src="./scripts/myapp.js"></script>
+</html>

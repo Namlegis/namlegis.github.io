@@ -1,0 +1,296 @@
+$dark-color: #084A5E;
+$bright-color: #009ac8;
+$brightFade-color: #0099c838;
+$light-color: #d4f2fc;
+$accent-color: #DE7B18;
+$accentLight-color: #E8D2BC;
+
+/* ===== START -- TOP LEVEL BASIC STYLING AND RESETS ===== */
+    html {
+        font-size: 62.5%;  //this is so that I can use rems where 1rem = 10px; Using rems help with accessibility 
+    }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        list-style: none;
+        color: $dark-color;
+        font-family: 'Inconsolata', monospace;
+        font-weight: 500;
+        
+    }
+    body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    main {
+        width: 90%;
+        max-width: 2048px;
+        margin: 0 auto;
+        padding: 20px 0;
+        font-size: 2rem;
+        flex-grow: 1;
+    }
+    header {
+        border-bottom: solid $dark-color 1px;
+        padding: 4rem 0;
+        position: sticky;
+        top: 0;
+        background: white;
+        transition: ease-in-out .2s; //Transition for JS shrinking of header
+    }
+    img {
+        object-fit: cover;
+    }
+/* ===== END -- TOP LEVEL BASIC STYLING AND RESETS ===== */
+
+/* ===== START -- Font Styling Base -> towards the top so that it can be overwritten easier =====*/
+    a {
+        color: $accent-color;
+        &:hover {
+            transition: ease-in-out 200ms;
+            color: $bright-color;
+        }
+    }
+    h1{
+        font-size: 5rem;
+        line-height: 1.1;
+    }
+    h3{
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+    }
+    h4{
+        font-size: 2rem;
+        line-height: 1.1;
+    }
+    p{
+        
+        font-size: 2rem;
+        line-height: 1.5;
+        font-family: 'Roboto', sans-serif;
+    }
+    .page-title {
+        font-size: 7.2rem;
+    }
+/* ========= END of BASIC styling ======== */
+
+/* ========= START of HEADER styling for DESKTOP ======== */
+    .header-wrapper{
+        width: 90%;
+        max-width: 2048px;
+        margin: 0 auto;
+        display: flex;
+        & a {
+            color:$dark-color;
+            &:hover {
+                transition: ease-in-out 100ms;
+                color: $bright-color;
+            }
+        }
+        .nav-contact {
+            color: $accent-color; //This changes the contact link color to give it added seperation
+        }
+        #logo {
+            font-size: 4.8rem;
+            margin-right: 15px;
+            font-weight: 100;
+            width: auto;
+            margin-right: 10px;
+            display: flex;
+            justify-self: center;
+        }
+        // This is the line separating the logo from the nav.
+        .break-line {  
+            width: 1px;
+            height: 6rem;
+            background: $accent-color;
+            margin: 0 8px;
+        }
+        nav {
+            flex:1;
+            align-self: center;
+            display: flex;
+            margin-bottom: 5px;
+            position: relative;  //Allows the contact button to be pushed to the edge of the navigation rather than the edge of the page
+            ul {
+                display: flex;
+                li {
+                    font-size: 2.4rem;
+                    padding: 5px 15px;
+                    font-weight: 300;
+                    
+                }
+                //Contact Button
+                :nth-child(4){
+                    position: absolute; //Allows to be pushed to the right
+                    right: 0;
+                }
+            }
+            //Creates a line above the navigation link when hovered
+            a::before {
+                content: '';
+                display: block;
+                width: 100%;
+                height:2px;
+                background: $accent-color;
+                transform: scale(0,1);
+                transition: transform cubic-bezier(0.215, 0.610, 0.355, 1) 500ms;
+            }
+            a:hover::before {
+                transform: scale(1,1);
+            }
+        }
+    }
+/* ========= END of HEADER styling ======== */
+
+/* ========= START of FOOTER ======== */
+    footer{
+        background: $dark-color;
+        padding: 4rem 0;
+        bottom: 0;
+        flex-shrink: 0;
+        border-top: solid $brightFade-color 1px;
+        .footer-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 90%;
+            max-width: 2048px;
+            margin: 0 auto;
+        }
+        .social-media-icons {
+            display: grid;
+            grid-template-columns: 25% 25% 25% 25%;
+            z-index: 2;
+        }
+        .fa {
+            padding: 12px;
+            font-size: 2rem !important;
+            text-align: center;
+            text-decoration: none;
+            width: 5rem;
+            height: 5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            margin: 0 10px;
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+        //Official colors of the companies
+        .fa-facebook { 
+            background: #3B5998;
+            color: white;
+        }
+        .fa-instagram {
+            color: white;
+            background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+        }
+        .fa-twitter{
+            background-color: #1da1f2;
+            color: white;
+        }
+        .fa-youtube {
+            background-color: #FF0000;
+            color: white;
+        }
+        .fa-arrow-circle-up {
+            font-size: 4rem !important;
+            padding-left: 0%;
+            margin-left: 0;
+        }
+        .built-by {
+            h2 {
+            color: $accent-color;
+            }
+        }
+    }
+/* =========END of FOOTER Section ======== */
+
+/* =========START of Subscribe Section ======== */
+    .subscribe {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 300px;
+        // background: grey;
+        margin: 8rem 0;
+    }
+    .subscribe-form {
+        padding-left: 20px;
+        padding-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        input {
+            width: 280px;
+            height: 40px;
+            border-style: hidden;
+            background: $dark-color;
+            color: $accentLight-color;
+            border-radius: 5px;
+            box-shadow: none;
+            padding-left: 10px;
+            font-size: 2.4rem;
+        }
+        input:focus {
+            outline: none;
+        }
+        button {
+            height: 30px;
+            width: 100px;
+            margin-top: 5px;
+            font-size: 2rem;
+            background: $light-color;
+            padding: 5px 0 30px 0;
+            border-style: hidden;
+            border-radius: 5px;
+            transition: 300ms;
+        }
+        button:hover {
+            background: $bright-color;
+            cursor: pointer;
+            transition: 350ms ease-in-out;
+            color: $accentLight-color;
+        }
+        
+    }
+    // Grid is used here so that the text can properly be styled and responsive
+    .subscribe-text{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-auto-rows: minmax(150px, auto);
+        grid-template-columns: 3fr 1fr; //Allows the "to get the latest" to start where I want it
+        justify-items: center;
+        align-items: center;
+        padding-right: 20px; //Creates separation between elements
+        .grid-item-1 {
+            grid-column-start: 1;
+            grid-column-end: 4;
+            align-self: end;
+            padding-right: 10%;
+            h2{
+                font-size: 6.4rem;
+            }
+        }
+        .grid-item-2 {
+            grid-column-start: 3;
+            align-self: start;
+            margin-top: -10%;
+            font-size: 3rem;
+        }
+    }
+/* =========END of Subscribe Section ======== */
+
+
+
+@import 'home';
+@import 'experiences';
+@import 'filter';
+@import 'contact';
+@import 'mobile';
